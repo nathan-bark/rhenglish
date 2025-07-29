@@ -7,7 +7,7 @@ import xLogo from "../../assets/icons8-x-100.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white p-6 mt-10 shadow-inner rounded-t-lg">
+    <footer className="bg-secondary text-textOnDark p-6 mt-10 shadow-inner rounded-t-lg">
       <div className="container mx-auto text-center text-sm">
         <p>
           &copy; {new Date().getFullYear()} Robin Hood English. All rights

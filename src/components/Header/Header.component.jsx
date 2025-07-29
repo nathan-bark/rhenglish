@@ -4,7 +4,7 @@ import { NavLink } from "react-router";
 const Header = () => {
   return (
     <div>
-      <header className="bg-gradient-to-r from-primary to-secondary text-textPrimary p-4 shadow-lg rounded-b-lg">
+      <header className="bg-primary text-textOnDark p-6 shadow-lg rounded-b-lg">
         <nav className="container mx-auto flex justify-between items-center">
           <NavLink
             to="/"

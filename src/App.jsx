@@ -2,21 +2,25 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router";
 import Header from "./components/Header/Header.component.jsx";
 import Footer from "./components/Footer/Footer.component.jsx";
-import HomePage from "./routes/HomePage/Home.route.jsx";
+import HomePage from "./routes/HomePage/HomePage.component.jsx";
+import CoursesPage from "./routes/CoursesPage/CoursesPage.component.jsx";
+import AboutPage from "./routes/AboutPage/AboutPage.component.jsx";
+import ContactPage from "./routes/ContactPage/ContactPage.component.jsx";
+import RescourcesPage from "./routes/ResourcesPage/ResourcesPage.component.jsx";
 
 import "./App.css";
 
 function App() {
   return (
-    <div>
+    <div className="bg-background">
       <BrowserRouter>
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          {/* <Route path="/courses" element={<CoursesPage />} />
+          <Route path="/courses" element={<CoursesPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/Resource" element={<RescourcesPage />} /> */}
+          <Route path="/Resources" element={<RescourcesPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>
