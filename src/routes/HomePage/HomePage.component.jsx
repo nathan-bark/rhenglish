@@ -130,6 +130,21 @@ const HomePage = () => {
           </NavLink>
         </div>
       </section>
+
+      {/* New: Call-to-Action Section */}
+      <section className="w-full text-center py-16 px-8 bg-primary text-textOnDark rounded-lg shadow-xl">
+        <h2 className="text-4xl font-bold mb-4">Ready to Start Learning?</h2>
+        <p className="text-lg mb-8 max-w-2xl mx-auto">
+          Book a free, no-obligation trial lesson with one of our expert tutors
+          to experience our teaching style firsthand.
+        </p>
+        <NavLink
+          to="/contact"
+          className="bg-accent hover:bg-secondary text-textOnDark font-bold py-4 px-12 rounded-full text-xl shadow-lg transform hover:scale-105 transition-all duration-300"
+        >
+          Book Your Free Trial Today!
+        </NavLink>
+      </section>
     </div>
   );
 };

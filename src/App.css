@@ -1,14 +1,54 @@
 @import "tailwindcss";
 
-@theme {
+/* @theme {
   --color-primary: oklch(50.48% 0.144 140.75);
   --color-secondary: oklch(80.05% 0.108 86.87);
   --color-accent: oklch(33.58% 0.126 18.06);
   --color-background: oklch(97.23% 0.024 93.36);
   --color-surface: oklch(93.18% 0.027 140.71);
-  --color-textPrimary: oklch(20.89% 0.000 0);
-  --color-textOnDark: oklch(100% 0.000 0);
+  --color-textPrimary: oklch(20.89% 0 0);
+  --color-textOnDark: oklch(100% 0 0);
   --color-success: oklch(70.92% 0.119 148.65);
   --color-warning: oklch(87.89% 0.134 86.64);
   --color-error: oklch(46.06% 0.158 35.84);
+} */
+
+/* @theme {
+  --color-primary: oklch(34.25% 0.088 249.71);
+  --color-secondary: oklch(49.88% 0.054 251.69);
+  --color-accent: oklch(69.86% 0.134 83.56);
+  --color-background: oklch(97.35% 0.012 250.29);
+  --color-surface: oklch(93.13% 0.021 247.93); 
+  --color-textPrimary: oklch(19.29% 0.007 263.26);
+  --color-textOnDark: oklch(100% 0.000 0);
+  --color-success: oklch(50.48% 0.144 140.75);
+  --color-warning: oklch(87.89% 0.134 86.64);
+  --color-error: oklch(46.06% 0.158 35.84);
+} */
+
+@theme {
+  --color-primary: oklch(54.49% 0.063 158.45);
+  --color-secondary: oklch(75.31% 0.046 158.85);
+  --color-accent: oklch(62.37% 0.084 62.08);
+  --color-background: oklch(97.22% 0.024 87.05);
+  --color-surface: oklch(93.18% 0.027 140.71); 
+  --color-textPrimary: oklch(20.35% 0.016 112.56);
+  --color-textOnDark: oklch(100% 0.000 0);
+  --color-success: oklch(50.48% 0.144 140.75);
+  --color-warning: oklch(87.89% 0.134 86.64);
+  --color-error: oklch(46.06% 0.158 35.84);
 }
+
+
+/* @theme {
+  --color-primary: oklch(49.19% 0.081 251.69);
+  --color-secondary: oklch(75.46% 0.030 252.32);
+  --color-accent: oklch(46.99% 0.158 35.84);
+  --color-background: oklch(100% 0.000 0);
+  --color-surface: oklch(93.18% 0.027 140.71);
+  --color-textPrimary: oklch(7.28% 0.009 261.27);
+  --color-textOnDark: oklch(100% 0.000 0);
+  --color-success: oklch(50.48% 0.144 140.75);
+  --color-warning: oklch(87.89% 0.134 86.64);
+  --color-error: oklch(46.06% 0.158 35.84);
+} */
