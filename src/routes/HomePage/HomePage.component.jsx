@@ -1,31 +1,41 @@
 import React from "react";
 import { NavLink } from "react-router"; // Import NavLink for internal navigation
 
+import heroImage from '../../assets/teacher-doing-english-lesson-online-his-students.jpg'
+
 const HomePage = () => {
   return (
     <div className="min-h-[calc(100vh-160px)] flex flex-col items-center justify-center p-8 bg-surface rounded-lg shadow-md max-w-4xl mx-auto my-8">
-      <h1 className="text-5xl font-extrabold text-textPrimary mb-6 text-center leading-tight">
-        Unlock Your English Potential
-      </h1>
-      <p className="text-xl text-textPrimary mb-8 text-center max-w-2xl">
-        Personalized online English lessons designed to help you achieve fluency
-        and confidence.
-      </p>
-      <div className="flex space-x-4">
-        <NavLink
-          to="/courses"
-          className="bg-primary text-textPrimary py-2 px-4 rounded-lg hover:bg-secondary transition-colors duration-300"
-        >
-          Browse Courses
-        </NavLink>
-        <NavLink
-          to="/contact"
-          className="bg-secondary text-textPrimary py-2 px-4 rounded-lg hover:bg-primary transition-colors duration-300"
-        >
-          Contact Us
-        </NavLink>
-      </div>
+   
+       {/* New: Hero Section with Image */}
+      <section className="w-full flex flex-col md:flex-row-reverse md:justify-between md:gap-12 md:items-center text-center md:text-left py-12 px-4 md:py-24">
+        {/* Image Container */}
+        <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
+          <img
+            src={heroImage}
+            alt="An image representing online learning."
+            className="w-full h-auto rounded-lg shadow-lg"
+          />
+        </div>
 
+        {/* Text Content Container */}
+        <div className="w-full md:w-1/2">
+          <h1 className="text-5xl font-extrabold text-textPrimary mb-6 leading-tight">
+            Unlock Your English Potential
+          </h1>
+          <p className="text-xl text-textPrimary mb-8 max-w-2xl">
+            Personalized online English lessons designed to help you achieve fluency and confidence.
+          </p>
+          <div className="flex justify-center md:justify-start space-x-4">
+            <NavLink to="/courses" className="bg-primary hover:bg-secondary text-textOnDark font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300">
+              Explore Courses
+            </NavLink>
+            <NavLink to="/contact" className="bg-accent hover:bg-secondary text-textOnDark font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300">
+              Book a Free Trial
+            </NavLink>
+          </div>
+        </div>
+      </section>
       <section className="w-full text-center py-12 bg-background rounded-lg shadow-inner mt-10">
         {" "}
         {/* Using bg-background for contrast */}
