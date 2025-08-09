@@ -90,17 +90,7 @@ const Footer = () => {
           <h3 className="text-xl font-bold mb-4">Follow Us</h3>
           <div className="flex space-x-4">
             {socialMediaLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-surface transition-colors duration-300"
-                aria-label={`Follow us on ${link.name}`}
-              >
-                {/* Placeholder SVG icon, you can replace with real icons */}
-                <img src={link.icon} className="w-6 h-6" alt={link.name} />
-              </a>
+             <SocialIcon src={link.icon} alt={link.name} url={link.url} />
             ))}
           </div>
         </div>
