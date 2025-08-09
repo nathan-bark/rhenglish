@@ -1,13 +1,16 @@
-import React from "react";
-import { NavLink } from "react-router"; // Import NavLink for internal navigation
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router";
 
-import heroImage from '../../assets/teacher-doing-english-lesson-online-his-students.jpg'
+import heroImage from "../../assets/teacher-doing-english-lesson-online-his-students.jpg";
+
+import Testimonials from "../../components/Testimonials/Testimonals.component";
 
 const HomePage = () => {
+  
+
   return (
     <div className="min-h-[calc(100vh-160px)] flex flex-col items-center justify-center p-8 bg-surface rounded-lg shadow-md max-w-4xl mx-auto my-8">
-   
-       {/* New: Hero Section with Image */}
+      {/* New: Hero Section with Image */}
       <section className="w-full flex flex-col md:flex-row-reverse md:justify-between md:gap-12 md:items-center text-center md:text-left py-12 px-4 md:py-24">
         {/* Image Container */}
         <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
@@ -24,13 +27,20 @@ const HomePage = () => {
             Unlock Your English Potential
           </h1>
           <p className="text-xl text-textPrimary mb-8 max-w-2xl">
-            Personalized online English lessons designed to help you achieve fluency and confidence.
+            Personalized online English lessons designed to help you achieve
+            fluency and confidence.
           </p>
           <div className="flex justify-center md:justify-start space-x-4">
-            <NavLink to="/courses" className="bg-primary hover:bg-secondary text-textOnDark font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300">
+            <NavLink
+              to="/courses"
+              className="bg-primary hover:bg-secondary text-textOnDark font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300"
+            >
               Explore Courses
             </NavLink>
-            <NavLink to="/contact" className="bg-accent hover:bg-secondary text-textOnDark font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300">
+            <NavLink
+              to="/contact"
+              className="bg-accent hover:bg-secondary text-textOnDark font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300"
+            >
               Book a Free Trial
             </NavLink>
           </div>
@@ -141,6 +151,9 @@ const HomePage = () => {
         </div>
       </section>
 
+      <Testimonials />
+
+     
       {/* New: Call-to-Action Section */}
       <section className="w-full text-center py-16 px-8 bg-primary text-textOnDark rounded-lg shadow-xl">
         <h2 className="text-4xl font-bold mb-4">Ready to Start Learning?</h2>
