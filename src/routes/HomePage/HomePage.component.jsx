@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { NavLink } from "react-router";
 
 import heroImage from "../../assets/teacher-doing-english-lesson-online-his-students.jpg";

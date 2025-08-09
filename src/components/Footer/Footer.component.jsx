@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router";
 
 import SocialIcon from "../SocialIcon/SocialIcon.component";
 import facebook from "../../assets/317727_facebook_social media_social_icon.png";
@@ -6,18 +7,111 @@ import instagram from "../../assets/1298747_instagram_brand_logo_social media_ic
 import xLogo from "../../assets/icons8-x-100.png";
 
 const Footer = () => {
+  const socialMediaLinks = [
+    {
+      name: "Facebook",
+      url: "#",
+      icon: facebook,
+    },
+    {
+      name: "Twitter",
+      url: "#",
+      icon: xLogo,
+    },
+    {
+      name: "Instagram",
+      url: "#",
+      icon: instagram,
+    },
+  ];
+
   return (
-    <footer className="bg-secondary text-textOnDark p-6 mt-10 shadow-inner rounded-t-lg">
-      <div className="container mx-auto text-center text-sm">
-        <p>
+    <footer className="bg-primary text-textOnDark py-12 px-4 shadow-inner">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* About Section */}
+        <div className="md:col-span-1">
+          <h3 className="text-2xl font-bold mb-4">Robin Hood English</h3>
+          <p className="text-sm max-w-sm">
+            Providing high-quality, personalized English lessons to help you
+            achieve fluency and confidence. Our mission is to make learning
+            English an engaging and rewarding experience.
+          </p>
+        </div>
+
+        {/* Quick Links */}
+        <div className="md:col-span-1">
+          <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+          <ul className="space-y-2 text-sm">
+            <li>
+              <NavLink
+                to="/"
+                className="hover:text-surface transition-colors duration-300"
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/courses"
+                className="hover:text-surface transition-colors duration-300"
+              >
+                Courses
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/resources"
+                className="hover:text-surface transition-colors duration-300"
+              >
+                Resources
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/about"
+                className="hover:text-surface transition-colors duration-300"
+              >
+                About Us
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/contact"
+                className="hover:text-surface transition-colors duration-300"
+              >
+                Contact
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+
+        {/* Social Media */}
+        <div className="md:col-span-1">
+          <h3 className="text-xl font-bold mb-4">Follow Us</h3>
+          <div className="flex space-x-4">
+            {socialMediaLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-surface transition-colors duration-300"
+                aria-label={`Follow us on ${link.name}`}
+              >
+                {/* Placeholder SVG icon, you can replace with real icons */}
+                <img src={link.icon} className="w-6 h-6" alt={link.name} />
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Copyright */}
+      <div className="container mx-auto text-center mt-8 pt-4 border-t border-secondary">
+        <p className="text-sm">
           &copy; {new Date().getFullYear()} Robin Hood English. All rights
           reserved.
         </p>
-        <div className="mt-2 flex justify-center gap-2 ">
-          <SocialIcon src={facebook} alt={"Facebook Logo"}/>
-          <SocialIcon src={instagram} alt={"Instagram Logo"}/>
-          <SocialIcon src={xLogo} alt={"X Logo"}/>
-        </div>
       </div>
     </footer>
   );

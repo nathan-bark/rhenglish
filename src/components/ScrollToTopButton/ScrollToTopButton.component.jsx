@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isOverFooter, setIsOverFooter] = useState(false);
+  const footerRef = useRef(null);
 
   // Show button when page is scrolled down
   const toggleVisibility = () => {
@@ -21,6 +23,25 @@ const ScrollToTopButton = () => {
   };
 
   useEffect(() => {
+    const footer = document.querySelector("footer");
+    footerRef.current = footer;
+
+    if (!footer) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsOverFooter(entry.isIntersecting);
+      },
+      { root: null, threshold: 0 }
+    );
+
+    observer.observe(footer);
+
+    return () => observer.disconnect();
+  }, []);
+  
+
+  useEffect(() => {
     // Add the scroll event listener when the component mounts
     window.addEventListener('scroll', toggleVisibility);
 
@@ -30,12 +51,15 @@ const ScrollToTopButton = () => {
     };
   }, []); // The empty dependency array ensures this effect runs only once
 
+  const buttonClasses = !isOverFooter ? "bg-primary text-textOnDark p-3 rounded-full shadow-lg transform hover:scale-110 transition-all duration-300 focus:outline-none" :
+  "bg-secondary text-textOnDark p-3 rounded-full shadow-lg transform hover:scale-110 transition-all duration-300 focus:outline-none"
+
   return (
     <div className="fixed bottom-4 right-4 z-[99]">
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="bg-primary text-textOnDark p-3 rounded-full shadow-lg transform hover:scale-110 transition-all duration-300 focus:outline-none"
+          className={buttonClasses}
           aria-label="Scroll to top"
         >
           {/* An SVG arrow icon */}
