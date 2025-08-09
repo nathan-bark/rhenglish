@@ -9,6 +9,7 @@ import ContactPage from "./routes/ContactPage/ContactPage.component.jsx";
 import ResourcesPage from "./routes/ResourcesPage/ResourcesPage.component.jsx";
 import NotFoundPage from "./routes/NotFoundPage/NotFoundPage.component.jsx";
 import BlogPostPage from "./routes/BlogPostPage/BlogPostPage.component.jsx";
+import ScrollToTopButton from "./components/ScrollToTopButton/ScrollToTopButton.component.jsx";
 
 import "./App.css";
 
@@ -17,15 +18,18 @@ function App() {
     <div className="bg-background">
       <BrowserRouter>
         <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/courses" element={<CoursesPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/resources" element={<ResourcesPage />} />
-          <Route path="/resources/:slug" element={<BlogPostPage />} /> 
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
+        <div className="pt-16 min-h-screen"> 
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/courses" element={<CoursesPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/resources" element={<ResourcesPage />} />
+            <Route path="/resources/:slug" element={<BlogPostPage />} /> 
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </div>
+        <ScrollToTopButton />
         <Footer />
       </BrowserRouter>
     </div>
