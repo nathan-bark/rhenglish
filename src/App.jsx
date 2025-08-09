@@ -6,8 +6,9 @@ import HomePage from "./routes/HomePage/HomePage.component.jsx";
 import CoursesPage from "./routes/CoursesPage/CoursesPage.component.jsx";
 import AboutPage from "./routes/AboutPage/AboutPage.component.jsx";
 import ContactPage from "./routes/ContactPage/ContactPage.component.jsx";
-import RescourcesPage from "./routes/ResourcesPage/ResourcesPage.component.jsx";
+import ResourcesPage from "./routes/ResourcesPage/ResourcesPage.component.jsx";
 import NotFoundPage from "./routes/NotFoundPage/NotFoundPage.component.jsx";
+import BlogPostPage from "./routes/BlogPostPage/BlogPostPage.component.jsx";
 
 import "./App.css";
 
@@ -21,7 +22,8 @@ function App() {
           <Route path="/courses" element={<CoursesPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/Resources" element={<RescourcesPage />} />
+          <Route path="/resources" element={<ResourcesPage />} />
+          <Route path="/resources/:slug" element={<BlogPostPage />} /> 
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />
