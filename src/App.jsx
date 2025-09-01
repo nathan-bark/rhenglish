@@ -16,7 +16,7 @@ import "./App.css";
 function App() {
   return (
     <div className="bg-background">
-      <BrowserRouter>
+      <BrowserRouter basename="/rhenglish">
         <Header />
         <div className="pt-16 min-h-screen"> 
           <Routes>
