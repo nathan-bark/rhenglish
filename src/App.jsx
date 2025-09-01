@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Routes, Route } from "react-router";
+import { BrowserRouter, Routes, Route } from "react-router";
 import Header from "./components/Header/Header.component.jsx";
 import Footer from "./components/Footer/Footer.component.jsx";
 import HomePage from "./routes/HomePage/HomePage.component.jsx";
@@ -16,7 +16,7 @@ import "./App.css";
 function App() {
   return (
     <div className="bg-background">
-      <HashRouter>
+      <BrowserRouter>
         <Header />
         <div className="pt-16 min-h-screen"> 
           <Routes>
@@ -31,7 +31,7 @@ function App() {
         </div>
         <ScrollToTopButton />
         <Footer />
-      </HashRouter>
+      </BrowserRouter>
     </div>
   );
 }
