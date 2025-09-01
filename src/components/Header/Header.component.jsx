@@ -1,15 +1,16 @@
 import React from "react";
 import { NavLink } from "react-router";
+import logo from "../../assets/RHE_Logo.png";
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-50 bg-primary text-textOnDark p-6 shadow-lg rounded-b-lg">
+    <header className="sticky top-0 z-50 bg-primary text-textOnDark p-4 border-textOnDark shadow-lg rounded-b-lg">
       <nav className="container mx-auto flex justify-between items-center">
         <NavLink
           to="/"
           className="text-3xl font-extrabold tracking-tight hover:text-surface transition-colors duration-300"
         >
-          Robin Hood English
+          <img src={logo} alt="logo" width={100} height={100} />
         </NavLink>
         <ul className="flex space-x-6">
           <li>

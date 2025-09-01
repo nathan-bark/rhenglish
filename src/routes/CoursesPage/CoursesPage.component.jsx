@@ -42,11 +42,11 @@ const CoursesPage = () => {
               </ul>
             </div>
             
-            <div className="text-center md:text-left flex space-x-4">
+            <div className="text-center md:text-left flex space-x-4 ">
               {/* "Learn More" button now opens the modal */}
               <button
                 onClick={() => openModal(course)}
-                className="inline-block bg-secondary text-textPrimary py-3 px-6 rounded-lg font-semibold text-lg hover:bg-secondary hover:text-primary transition-colors duration-300"
+                className="inline-block bg-secondary text-textPrimary py-3 px-6 rounded-lg font-semibold text-lg hover:bg-secondary hover:text-primary transition-colors duration-300 hover:cursor-pointer"
               >
                 Learn More
               </button>

@@ -1,3 +1,5 @@
+import tutorImage from "../assets/avatar_5dbbsfzo9m8.jpg";
+
 export const tutor = {
   name: "Nathan Bark",
   title: "Founder & Head Tutor",
@@ -10,6 +12,5 @@ I believe that every student has a unique learning style, and my goal is to crea
 Outside of teaching I ride my bike around Bulgaria and read a lot of books.
 
 I look forward to working with you!`,
-  image:
-    "https://placehold.co/400x400/oklch(50.48% 0.144 140.75)/oklch(93.18% 0.027 140.71)?text=Tutor+Photo",
+  image: tutorImage,
 };
