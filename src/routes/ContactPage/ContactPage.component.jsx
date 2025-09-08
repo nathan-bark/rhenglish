@@ -48,7 +48,7 @@ const ContactPage = () => {
   const socialMediaLinks = [
     { name: "Facebook", url: "#", icon: facebook },
     { name: "Twitter", url: "#", icon: xLogo },
-    { name: "Instagram", url: "#", icon: instagram },
+    { name: "Instagram", url: "https://www.instagram.com/robinhoodenglish/?hl=en", icon: instagram },
   ];
 
   return (

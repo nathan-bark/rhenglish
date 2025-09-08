@@ -20,7 +20,7 @@ const Footer = () => {
     },
     {
       name: "Instagram",
-      url: "#",
+      url: "https://www.instagram.com/robinhoodenglish/?hl=en",
       icon: instagram,
     },
   ];
